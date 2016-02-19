@@ -1,0 +1,22 @@
+{
+  "name": "switch-import",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Johnson Lin",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/johnsonlin/switch-import.git"
+  },
+  "bugs": {
+    "url": "https://github.com/johnsonlin/switch-import/issues"
+  },
+  "homepage": "https://github.com/johnsonlin/switch-import#readme",
+  "description": "",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  }
+}
