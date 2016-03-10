@@ -2,9 +2,6 @@
   "name": "switch-import",
   "version": "0.0.1",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Johnson Lin",
   "license": "SEE LICENSE IN LICENSE",
   "repository": {
@@ -17,6 +14,7 @@
   "homepage": "https://github.com/johnsonlin/switch-import#readme",
   "description": "",
   "dependencies": {
-    "grunt": "^0.4.5"
+    "grunt": "^0.4.5",
+    "lodash": "^4.6.1"
   }
 }
