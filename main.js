@@ -33,7 +33,14 @@ function switchImport(content) {
 
     matchedImports.forEach(function (importString) {
         var modulePattern = /\{(.*)\}/g;
-        var modules = (modulePattern.exec(importString) || [])[1].toString().split(',').sort();
+        var modules = _.chain(
+            (modulePattern.exec(importString) || [])[1]
+                .toString()
+                .split(',')
+                .map(_.trim)
+        )
+            .sort()
+            .value();
 
         modules.forEach(function (moduleName) {
             moduleName = _.trim(moduleName);

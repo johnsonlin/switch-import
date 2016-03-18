@@ -20,5 +20,11 @@ import kababCase from 'lodash/kababCase';
 ```
 
 ### Options
-* `-src` - target directory (default: 'src') | usage: `node node_modules/switch-import/main -src temp_dir`
-* `-from` - module name (default: 'lodash') | usage: `node node_modules/switch-import/main -from jquery`
+* `-src` - target directory (_default: 'src'_) | usage: `node node_modules/switch-import/main -src temp_dir`
+* `-from` - module name (_default: 'lodash'_) | usage: `node node_modules/switch-import/main -from jquery`
+
+### usage
+`$ node node_modules/switch-import/main`
+`$ node node_modules/switch-import/main -src temp_dir`
+`$ node node_modules/switch-import/main -from jquery`
+`$ node node_modules/switch-import/main -src temp_dir -from jquery`
