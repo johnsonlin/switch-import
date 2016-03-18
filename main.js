@@ -4,6 +4,7 @@ var grunt = require('grunt');
 var _ = require('lodash');
 
 var root = path.resolve('.');
+var aliases = require('./aliases');
 
 var availableArgs = ['-src', '-from'];
 var args = process.argv;
@@ -27,6 +28,10 @@ function searchForImport(content) {
     return options.importPattern.test(content);
 }
 
+function processAliases(moduleName) {
+    return _.get(aliases, options.from + '.' + moduleName, null) || moduleName;
+}
+
 function switchImport(content) {
     var matchedImports = content.match(options.importPattern) || [];
     var stringToReplace = [];
@@ -38,6 +43,7 @@ function switchImport(content) {
                 .toString()
                 .split(',')
                 .map(_.trim)
+                .map(processAliases)
         )
             .sort()
             .value();
@@ -62,7 +68,8 @@ function searchAndSwitch() {
 
         if (searchResult) {
             try {
-                grunt.file.write(filePath, switchImport(jsFileContent));
+                var contentToSave = switchImport(jsFileContent);
+                grunt.file.write(filePath, contentToSave);
                 grunt.log.writeln('Successfully switched file: ' + filePath);
             } catch (err) {
                 grunt.log.writeln('failed to switch file: ' + filePath + 'due to: ' + err.message);
