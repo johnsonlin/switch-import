@@ -5,7 +5,7 @@ var _ = require('lodash');
 
 var root = path.resolve('.');
 
-var availableArgs = ['-dir', '-from'];
+var availableArgs = ['-src', '-from'];
 var args = process.argv;
 var options = {
     from : 'lodash',
