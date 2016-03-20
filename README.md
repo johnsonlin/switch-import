@@ -14,9 +14,9 @@ import {get, result, set, kababCase} from 'lodash';
 to
 ```
 import get from 'lodash/get';
+import kababCase from 'lodash/kababCase';
 import result from 'lodash/result';
 import set from 'lodash/set';
-import kababCase from 'lodash/kababCase';
 ```
 
 ### Options
